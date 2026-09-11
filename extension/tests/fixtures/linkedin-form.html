@@ -1,0 +1,103 @@
+<div class="jobs-easy-apply-modal" role="dialog" aria-labelledby="easy-apply-title">
+  <h2 id="easy-apply-title">Apply to Acme Corp</h2>
+  <form id="easy-apply-form" class="jobs-easy-apply-content">
+    <div class="jobs-easy-apply-form-section__grouping">
+      <label for="phone-input" class="artdeco-text-input--label">
+        Mobile phone number
+      </label>
+      <input
+        id="phone-input"
+        name="phoneNumber"
+        type="tel"
+        class="artdeco-text-input--input"
+        autocomplete="tel"
+      />
+    </div>
+
+    <div class="jobs-easy-apply-form-section__grouping">
+      <label for="country-code-select" class="artdeco-text-input--label">
+        Phone country code
+      </label>
+      <select
+        id="country-code-select"
+        name="phoneCountryCode"
+        class="fb-dash-form-element__select-dropdown"
+        required
+      >
+        <option value="">Select an option</option>
+        <option value="US">United States (+1)</option>
+        <option value="GB">United Kingdom (+44)</option>
+        <option value="IN">India (+91)</option>
+        <option value="DE">Germany (+49)</option>
+      </select>
+    </div>
+
+    <div class="jobs-easy-apply-form-section__grouping">
+      <label for="cover-letter-textarea" class="artdeco-text-input--label">
+        Cover letter
+      </label>
+      <textarea
+        id="cover-letter-textarea"
+        name="coverLetter"
+        rows="6"
+        class="artdeco-text-input--input"
+        placeholder="Write a brief message to the hiring team"
+      ></textarea>
+    </div>
+
+    <fieldset
+      class="fb-dash-form-element__radio-group"
+      data-test-form-element-radio-group="true"
+    >
+      <legend class="fb-dash-form-element__label">
+        How many years of professional software engineering experience do you have?
+      </legend>
+      <div class="fb-radio">
+        <input
+          id="yoe-0"
+          type="radio"
+          name="yearsOfExperience"
+          value="0-1"
+        />
+        <label for="yoe-0">0-1 years</label>
+      </div>
+      <div class="fb-radio">
+        <input
+          id="yoe-2"
+          type="radio"
+          name="yearsOfExperience"
+          value="2-4"
+        />
+        <label for="yoe-2">2-4 years</label>
+      </div>
+      <div class="fb-radio">
+        <input
+          id="yoe-5"
+          type="radio"
+          name="yearsOfExperience"
+          value="5-7"
+        />
+        <label for="yoe-5">5-7 years</label>
+      </div>
+      <div class="fb-radio">
+        <input
+          id="yoe-8"
+          type="radio"
+          name="yearsOfExperience"
+          value="8+"
+        />
+        <label for="yoe-8">8+ years</label>
+      </div>
+    </fieldset>
+
+    <footer class="jobs-easy-apply-footer">
+      <button
+        type="submit"
+        class="artdeco-button artdeco-button--primary"
+        aria-label="Submit application"
+      >
+        Submit application
+      </button>
+    </footer>
+  </form>
+</div>

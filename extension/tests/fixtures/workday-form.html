@@ -1,0 +1,77 @@
+<div class="wd-application" data-automation-id="applicationForm">
+  <section data-automation-id="personalInformationSection">
+    <div class="wd-field">
+      <label for="firstName" data-automation-id="firstNameLabel">First Name</label>
+      <input
+        id="firstName"
+        type="text"
+        name="firstName"
+        data-automation-id="firstNameInput"
+        autocomplete="given-name"
+      />
+    </div>
+
+    <div class="wd-field">
+      <label for="lastName" data-automation-id="lastNameLabel">Last Name</label>
+      <input
+        id="lastName"
+        type="text"
+        name="lastName"
+        data-automation-id="lastNameInput"
+        autocomplete="family-name"
+      />
+    </div>
+
+    <div class="wd-field">
+      <label for="email" data-automation-id="emailLabel">Email Address</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        data-automation-id="emailInput"
+        autocomplete="email"
+      />
+    </div>
+
+    <div class="wd-field">
+      <label for="phone" data-automation-id="phoneLabel">Phone Number</label>
+      <input
+        id="phone"
+        type="tel"
+        name="phone"
+        data-automation-id="phoneInput"
+        autocomplete="tel"
+      />
+    </div>
+  </section>
+
+  <section data-automation-id="applicationQuestionsSection">
+    <div class="wd-field">
+      <label for="coverLetter" data-automation-id="coverLetterLabel">Cover Letter</label>
+      <textarea
+        id="coverLetter"
+        name="coverLetter"
+        data-automation-id="coverLetterTextarea"
+        rows="8"
+      ></textarea>
+    </div>
+  </section>
+
+  <section data-automation-id="resumeSection">
+    <div class="wd-field">
+      <label for="resume" data-automation-id="resumeFileUploadLabel">Resume / CV</label>
+      <input
+        id="resume"
+        type="file"
+        name="resume"
+        data-automation-id="resumeFileUpload"
+        accept=".pdf,.doc,.docx"
+      />
+    </div>
+  </section>
+
+  <div class="wd-actions">
+    <button type="button" data-automation-id="saveButton">Save</button>
+    <button type="submit" data-automation-id="submitButton">Submit Application</button>
+  </div>
+</div>

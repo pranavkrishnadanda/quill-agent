@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Agent Queue</title>
+  <link rel="stylesheet" href="./queue-view.css" />
+</head>
+<body>
+  <main class="queue-view">
+    <header class="queue-view__header">
+      <h1>Job Application Queue</h1>
+    </header>
+
+    <section class="queue-view__controls">
+      <div class="queue-view__add">
+        <input
+          id="urlInput"
+          type="url"
+          placeholder="https://boards.greenhouse.io/company/jobs/123"
+          autocomplete="off"
+        />
+        <button id="addUrl" type="button">Add</button>
+      </div>
+      <div class="queue-view__actions">
+        <button id="processAll" type="button">Process pending</button>
+        <button id="clearAll" type="button">Clear</button>
+      </div>
+    </section>
+
+    <section class="queue-view__table-wrap">
+      <table id="queueTable">
+        <thead>
+          <tr>
+            <th scope="col">URL</th>
+            <th scope="col">Status</th>
+            <th scope="col">Filled / Detected</th>
+            <th scope="col">Error</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./queue-view.ts"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<form id="application-form" data-testid="application-form">
+  <div class="ashby-field">
+    <label for="_systemfield_name">Full name</label>
+    <input id="_systemfield_name" name="full_name" type="text" autocomplete="name" required />
+  </div>
+
+  <div class="ashby-field">
+    <label for="_systemfield_email">Email</label>
+    <input id="_systemfield_email" name="email" type="email" autocomplete="email" required />
+  </div>
+
+  <div class="ashby-field">
+    <label for="_systemfield_resume">Resume</label>
+    <input id="_systemfield_resume" name="submissions[resume]" type="file" accept=".pdf,.doc,.docx" required />
+  </div>
+
+  <div class="ashby-field">
+    <label for="location">Current location</label>
+    <input id="location" name="location" type="text" autocomplete="address-level2" />
+  </div>
+
+  <div class="ashby-field">
+    <label for="linkedin">LinkedIn URL</label>
+    <input id="linkedin" name="linkedin_url" type="url" />
+  </div>
+
+  <button type="submit">Submit Application</button>
+</form>

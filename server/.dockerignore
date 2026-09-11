@@ -1,0 +1,88 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info
+.eggs/
+build/
+dist/
+develop-eggs/
+downloads/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+.venv
+venv
+env
+ENV
+.python-version
+
+# Testing / coverage
+tests
+.pytest_cache
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.mypy_cache
+.pyre/
+.pytype/
+.ruff_cache
+.pyrefly
+
+# Docs
+docs
+*.md
+!README.md
+
+# Editors / IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# CI
+.github
+.gitlab-ci.yml
+
+# Local scratch
+scratchpad/
+tmp/
+*.log

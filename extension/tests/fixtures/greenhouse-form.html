@@ -1,0 +1,47 @@
+<body>
+  <form id="application_form" action="/applications" method="post" enctype="multipart/form-data">
+    <h1>Apply for this Job</h1>
+
+    <div class="field">
+      <label for="full_name">Full Name</label>
+      <input type="text" name="job_application[full_name]" id="full_name" autocomplete="name" />
+    </div>
+
+    <div class="field">
+      <label for="email">Email <span class="required">*</span></label>
+      <input type="email" name="job_application[email]" id="email" autocomplete="email" required />
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone</label>
+      <input type="tel" name="job_application[phone]" id="phone" autocomplete="tel" />
+    </div>
+
+    <div class="field">
+      <label for="linkedin_url">LinkedIn Profile</label>
+      <input type="text" name="job_application[urls][LinkedIn]" id="linkedin_url" />
+    </div>
+
+    <div class="field">
+      <label for="resume">Resume/CV <span class="required">*</span></label>
+      <input type="file" name="job_application[resume]" id="resume" accept=".pdf,.doc,.docx" required />
+    </div>
+
+    <div class="field">
+      <label for="cover_letter">Cover Letter</label>
+      <textarea name="job_application[cover_letter_text]" id="cover_letter" rows="8"></textarea>
+    </div>
+
+    <div class="field">
+      <label for="years_of_experience">Years of Experience</label>
+      <select name="job_application[answers][years_of_experience]" id="years_of_experience">
+        <option value="">Please select</option>
+        <option value="0-1">0-1</option>
+        <option value="2-4">2-4</option>
+        <option value="5+">5+</option>
+      </select>
+    </div>
+
+    <button type="submit">Submit Application</button>
+  </form>
+</body>

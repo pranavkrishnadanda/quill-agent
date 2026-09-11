@@ -1,0 +1,105 @@
+{
+  "manifest_version": 3,
+  "name": "Quill Agent \u2014 AI-assisted job applications",
+  "version": "0.1.0",
+  "description": "Fill job-application forms with Claude, keep the human in the loop, never auto-submit.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://boards.greenhouse.io/*",
+    "https://job-boards.greenhouse.io/*",
+    "https://jobs.lever.co/*",
+    "https://jobs.ashbyhq.com/*",
+    "https://*.myworkdayjobs.com/*",
+    "https://www.linkedin.com/jobs/*",
+    "http://127.0.0.1:8787/*",
+    "http://localhost:8787/*",
+    "https://*.icims.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://boards.greenhouse.io/*",
+        "https://job-boards.greenhouse.io/*"
+      ],
+      "js": [
+        "src/content/greenhouse.ts"
+      ]
+    },
+    {
+      "matches": [
+        "https://jobs.lever.co/*"
+      ],
+      "js": [
+        "src/content/lever.ts"
+      ]
+    },
+    {
+      "matches": [
+        "https://jobs.ashbyhq.com/*"
+      ],
+      "js": [
+        "src/content/ashby.ts"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.myworkdayjobs.com/*"
+      ],
+      "js": [
+        "src/content/workday.ts"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.linkedin.com/jobs/*"
+      ],
+      "js": [
+        "src/content/linkedin.ts"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.icims.com/*"
+      ],
+      "js": [
+        "src/content/icims.ts"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/popup/queue-view.html",
+        "assets/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

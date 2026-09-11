@@ -1,0 +1,31 @@
+{
+  "fullName": "Jane Doe",
+  "email": "jane.doe@example.com",
+  "phone": "+1-555-123-4567",
+  "linkedin": "https://www.linkedin.com/in/janedoe",
+  "github": "https://github.com/janedoe",
+  "portfolio": "https://janedoe.dev",
+  "summary": "Senior software engineer with 8+ years building scalable web applications and distributed systems.",
+  "experience": [
+    {
+      "company": "Acme Corp",
+      "title": "Senior Software Engineer",
+      "location": "San Francisco, CA",
+      "startDate": "2022-01",
+      "endDate": "Present",
+      "highlights": [
+        "Led migration of monolithic backend to microservices, reducing p99 latency by 40%.",
+        "Mentored 4 engineers and drove adoption of TypeScript across the platform."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "University of California, Berkeley",
+      "degree": "B.S. Computer Science",
+      "startDate": "2013-08",
+      "endDate": "2017-05"
+    }
+  ],
+  "skills": ["TypeScript", "React", "Node.js"]
+}

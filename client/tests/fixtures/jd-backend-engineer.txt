@@ -1,0 +1,31 @@
+Backend Engineer — Payments Platform
+Contoso, Inc. · Remote (US) · Full-time
+
+About Contoso
+Contoso is a fast-growing fintech company building the infrastructure that powers modern digital payments for small and mid-sized businesses. Our platform processes millions of transactions per day across dozens of countries, and we are looking for engineers who love building reliable, high-throughput distributed systems.
+
+The Role
+We are hiring a Backend Engineer (1–3 years of experience) to join our Payments Platform team. You will design, build, and operate the services that route, authorize, and settle payments in near real time. You will work closely with product managers, SREs, and other backend engineers to ship features that directly move revenue and reduce operational toil.
+
+What You Will Do
+- Design and implement Python microservices that handle high-volume, latency-sensitive payment traffic.
+- Build asynchronous, event-driven workflows on AWS using SQS, SNS, EventBridge, and Lambda.
+- Model data in PostgreSQL and DynamoDB; write efficient queries and thoughtful migrations.
+- Instrument services with structured logging, metrics, and distributed tracing (OpenTelemetry).
+- Participate in on-call rotation for services you help build; contribute to runbooks and post-incident reviews.
+- Review code from teammates and mentor interns as you grow.
+
+What We Are Looking For
+- 1–3 years of professional backend experience shipping production services.
+- Strong Python skills; comfort with type hints, testing (pytest), and async patterns.
+- Working knowledge of AWS primitives (EC2, S3, IAM, at least one queue/stream service).
+- Familiarity with relational databases and REST or gRPC API design.
+- Solid CS fundamentals: data structures, concurrency, HTTP, and basic distributed-systems tradeoffs.
+
+Nice to Have
+- Experience with Kafka, Kinesis, or Temporal.
+- Exposure to Terraform, Kubernetes, or CDK.
+- Prior work in payments, fraud, or another regulated domain.
+
+Compensation
+Base salary $140k–$180k plus equity, benefits, and a $2,000 annual learning stipend.

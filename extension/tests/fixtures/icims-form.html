@@ -1,0 +1,141 @@
+<!--
+  iCIMS-style application form fixture.
+  iCIMS renders inputs with opaque numeric ids like `fld12345` and associates
+  labels via `<label for="fld12345">`. Selects and textareas follow the same
+  pattern. Some fields are grouped under fieldsets with legends.
+-->
+<form id="icims_application_form" name="icims_application_form" action="/jobs/12345/apply" method="post">
+  <fieldset id="fs_personal">
+    <legend>Personal Information</legend>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12345">First Name</label>
+      <input type="text" id="fld12345" name="fld12345" data-icims-field="firstname" required />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12346">Last Name</label>
+      <input type="text" id="fld12346" name="fld12346" data-icims-field="lastname" required />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12347">Email Address</label>
+      <input type="email" id="fld12347" name="fld12347" data-icims-field="email" required />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12348">Phone Number</label>
+      <input type="tel" id="fld12348" name="fld12348" data-icims-field="phone" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12349">Address</label>
+      <input type="text" id="fld12349" name="fld12349" data-icims-field="address" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12350">City</label>
+      <input type="text" id="fld12350" name="fld12350" data-icims-field="city" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12351">State / Province</label>
+      <select id="fld12351" name="fld12351" data-icims-field="state">
+        <option value="">Select a state</option>
+        <option value="CA">California</option>
+        <option value="NY">New York</option>
+        <option value="WA">Washington</option>
+        <option value="TX">Texas</option>
+      </select>
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12352">Postal Code</label>
+      <input type="text" id="fld12352" name="fld12352" data-icims-field="zip" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12353">Country</label>
+      <select id="fld12353" name="fld12353" data-icims-field="country">
+        <option value="">Select a country</option>
+        <option value="US">United States</option>
+        <option value="CA">Canada</option>
+        <option value="GB">United Kingdom</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset id="fs_eligibility">
+    <legend>Work Eligibility</legend>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12360">Are you legally authorized to work in the United States?</label>
+      <select id="fld12360" name="fld12360" data-icims-field="work_auth">
+        <option value="">Please select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12361">Will you now or in the future require sponsorship for employment visa status?</label>
+      <select id="fld12361" name="fld12361" data-icims-field="sponsorship">
+        <option value="">Please select</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset id="fs_experience">
+    <legend>Experience</legend>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12370">Current Employer</label>
+      <input type="text" id="fld12370" name="fld12370" data-icims-field="current_employer" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12371">Years of Experience</label>
+      <input type="number" id="fld12371" name="fld12371" data-icims-field="years_experience" min="0" max="50" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12372">LinkedIn Profile URL</label>
+      <input type="url" id="fld12372" name="fld12372" data-icims-field="linkedin" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12373">Personal Website</label>
+      <input type="url" id="fld12373" name="fld12373" data-icims-field="website" />
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12374">Cover Letter</label>
+      <textarea id="fld12374" name="fld12374" data-icims-field="cover_letter" rows="8" cols="60"></textarea>
+    </div>
+
+    <div class="iCIMS_TableRow">
+      <label for="fld12375">How did you hear about this position?</label>
+      <select id="fld12375" name="fld12375" data-icims-field="referral_source">
+        <option value="">Please select</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="indeed">Indeed</option>
+        <option value="referral">Employee Referral</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset id="fs_resume">
+    <legend>Resume</legend>
+    <div class="iCIMS_TableRow">
+      <label for="fld12380">Upload Resume</label>
+      <input type="file" id="fld12380" name="fld12380" data-icims-field="resume" accept=".pdf,.doc,.docx" />
+    </div>
+  </fieldset>
+
+  <div class="iCIMS_ButtonRow">
+    <button type="submit" id="submitApp" name="submitApp">Submit Application</button>
+  </div>
+</form>

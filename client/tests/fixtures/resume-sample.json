@@ -1,0 +1,26 @@
+{
+  "fullName": "Pranav Test",
+  "email": "test@example.com",
+  "phone": "+1 555-0100",
+  "location": "Hyderabad, India",
+  "linkedin": "https://linkedin.com/in/test",
+  "github": "https://github.com/test",
+  "portfolio": "https://test.dev",
+  "summary": "Backend engineer.",
+  "experience": [
+    {
+      "company": "Acme",
+      "title": "Engineer",
+      "startDate": "2024-01",
+      "endDate": "2025-06",
+      "bullets": ["Built things."]
+    }
+  ],
+  "education": [
+    {
+      "institution": "VVIT",
+      "degree": "B.Tech"
+    }
+  ],
+  "skills": ["Python", "TypeScript", "AWS"]
+}

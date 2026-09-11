@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Lever Application Form Fixture</title>
+</head>
+<body>
+  <form id="application-form" class="application-form" method="post" enctype="multipart/form-data">
+    <div class="application-field">
+      <label class="application-label" for="name">Full name<span class="required">*</span></label>
+      <input type="text" name="name" id="name" required autocomplete="name" />
+    </div>
+
+    <div class="application-field">
+      <label class="application-label" for="email">Email<span class="required">*</span></label>
+      <input type="email" name="email" id="email" required autocomplete="email" />
+    </div>
+
+    <div class="application-field">
+      <label class="application-label" for="current_company">Current company</label>
+      <input type="text" name="current_company" id="current_company" />
+    </div>
+
+    <div class="application-field">
+      <label class="application-label" for="urls[LinkedIn]">LinkedIn URL</label>
+      <input type="text" name="urls[LinkedIn]" id="linkedin" data-qa="linkedin-input" />
+    </div>
+
+    <div class="application-field application-additional">
+      <label class="application-label" for="additional_information">Additional information</label>
+      <textarea name="additional_information" id="additional_information" rows="6"></textarea>
+    </div>
+
+    <div class="application-actions">
+      <button type="submit" class="template-btn-submit">Submit application</button>
+    </div>
+  </form>
+</body>
+</html>
