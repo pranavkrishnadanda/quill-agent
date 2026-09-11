@@ -6,12 +6,16 @@ export interface RuntimeConfig {
   anthropicApiKey: string | null
 }
 
-/** Build-time defaults from Vite env — used only when nothing is saved in chrome.storage. */
+/** Build-time defaults from Vite env — used only when nothing is saved in chrome.storage.
+ *  Empty-string values are treated as unset (`??` alone would let them slip through). */
 function envDefaults(): RuntimeConfig {
+  const url = (import.meta.env.VITE_VERIFICATION_SERVER_URL ?? '').trim()
+  const token = (import.meta.env.VITE_VERIFICATION_TOKEN ?? '').trim()
+  const key = (import.meta.env.VITE_ANTHROPIC_API_KEY ?? '').trim()
   return {
-    verificationServerUrl: import.meta.env.VITE_VERIFICATION_SERVER_URL ?? 'http://127.0.0.1:8787',
-    verificationToken: import.meta.env.VITE_VERIFICATION_TOKEN ?? '',
-    anthropicApiKey: import.meta.env.VITE_ANTHROPIC_API_KEY ?? null,
+    verificationServerUrl: url || 'http://127.0.0.1:8787',
+    verificationToken: token,
+    anthropicApiKey: key || null,
   }
 }
 

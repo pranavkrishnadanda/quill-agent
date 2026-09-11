@@ -1,8 +1,10 @@
 // @vitest-environment jsdom
-import { describe, it, expect, beforeEach, vi } from 'vitest'
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
 
 /** Regression tests for reviewer finding:
  *  Saved credentials (via Options page) must override build-time env defaults.
+ *  We stub the Vite env vars to empty so the "no saved value" path returns
+ *  documented defaults regardless of the developer's local .env.
  */
 function installChromeStub(seed: Record<string, unknown> = {}): Map<string, unknown> {
   const store = new Map(Object.entries(seed))
@@ -24,7 +26,15 @@ function installChromeStub(seed: Record<string, unknown> = {}): Map<string, unkn
 
 describe('loadRuntimeConfig', () => {
   beforeEach(() => {
+    // Neutralise real .env so tests aren't sensitive to a developer's local config.
+    vi.stubEnv('VITE_VERIFICATION_SERVER_URL', '')
+    vi.stubEnv('VITE_VERIFICATION_TOKEN', '')
+    vi.stubEnv('VITE_ANTHROPIC_API_KEY', '')
     vi.resetModules()
+  })
+
+  afterEach(() => {
+    vi.unstubAllEnvs()
   })
 
   it('returns env defaults when nothing is saved in chrome.storage', async () => {

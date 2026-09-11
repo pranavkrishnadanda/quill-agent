@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { createLogger, readLogRing, type LogEntry } from '../../src/lib/logger'
+import { createLogger, readLogRing, flushLogRing, type LogEntry } from '../../src/lib/logger'
 
 // Chrome storage stub shared across createStorage() instances so the ring
 // persists between emit() and readLogRing() — mirrors the real MV3 sink.
@@ -31,10 +31,9 @@ function installChromeStub(): Map<string, unknown> {
   return backing
 }
 
-// Wait for the fire-and-forget pushToRing() microtasks to flush.
+// Await the exact ring-write promise chain — deterministic, no timing guesswork.
 async function flush(): Promise<void> {
-  for (let i = 0; i < 10; i++) await Promise.resolve()
-  await new Promise((r) => setTimeout(r, 0))
+  await flushLogRing()
 }
 
 describe('logger ring sink', () => {

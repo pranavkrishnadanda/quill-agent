@@ -37,6 +37,12 @@ function pushToRing(entry: LogEntry): Promise<void> {
   return next
 }
 
+/** Await every in-flight ring write. Tests should call this before readLogRing()
+ *  to avoid racing the fire-and-forget push chain. */
+export function flushLogRing(): Promise<void> {
+  return ringChain
+}
+
 export function createLogger(scope: string): Logger {
   const emit = (level: Level, ...args: unknown[]) => {
     // eslint-disable-next-line no-console
